@@ -1,0 +1,107 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>学生成绩系统</title>
+</head>
+<style>
+	table td,th{
+		padding: 5px 10px;
+	}
+</style>
+<body>
+	<div>
+		<form action=""><br><br>
+			姓名：<input id="xm" type="text"><br><br>
+			班级：<input id="bj" type="text"><br><br>
+			数学：<input id="sx" type="text"><br><br>
+			语文：<input id="yw" type="text"><br><br>
+			英语：<input id="yu" type="text"><br><br>
+		</form>
+		<button id="btn-add" onclick="Add()">新增</button>
+		<input id="" type="text">
+		<button id="btn-search">查找</button><br><br>
+		
+		
+		<table id="mytable" border="1">
+			<tr>
+				<th>姓名</th>
+				<th>班级</th>
+				<th>数学</th>
+				<th>语文</th>
+				<th>英语</th>
+				<th>总分</th>
+				<th></th>
+				<th></th>
+			</tr>
+			<tr>
+				<td>胡玉婷</td>
+				<td>网12班</td>
+				<td>120</td>
+				<td>90</td>
+				<td>100</td>
+				<td>310</td>
+				<td><button id="btn-xiu" onclick="xiugai(this)">修改</button></td>
+				<td><button id="btn-del" onclick="deletetr(this)">删除</button></td>
+			</tr>
+		</table>
+	</div>
+</body>
+<script>
+	//删除
+	function deletetr(obj){
+		var tb = obj.parentNode.parentNode.parentNode;
+		var tr = obj.parentNode.parentNode;
+		tb.removeChild(tr);
+	}
+	//修改
+	function xiugai(obj){
+		var tr = obj.parentNode.parentNode;
+		tr.setAttribute('contenteditable','true');
+	}
+	//新增
+	function Add(){
+		var name = document.getElementById('xm').value;
+		var clas = document.getElementById('bj').value;
+		var math = document.getElementById('sx').value;
+		var yuwen = document.getElementById('yw').value;
+		var english = document.getElementById('yu').value;
+
+		
+		var tr = document.createElement("tr"),//创建节点
+			td1 = document.createElement("td"),
+			td2 = document.createElement("td"),
+			td3 = document.createElement("td");
+			td4 = document.createElement("td"),
+			td5 = document.createElement("td"),
+			td6 = document.createElement("td");
+			td7 = document.createElement("td");
+			td8 = document.createElement("td");
+
+			td1.innerHTML=name;
+			td2.innerHTML=clas;
+			td3.innerHTML=math;
+			td4.innerHTML=yuwen;
+			td5.innerHTML=english;
+			td6.innerHTML=parseInt(math)+parseInt(yuwen)+parseInt(english);
+			td7.innerHTML="<button id='btn-xiu' onclick='xiugai(this)'>修改</button>";
+			td8.innerHTML="<button id='btn-del' onclick='deletetr(this)'>删除</button>";
+
+			tr.appendChild(td1);
+			tr.appendChild(td2);
+			tr.appendChild(td3);
+			tr.appendChild(td4);
+			tr.appendChild(td5);
+			tr.appendChild(td6);
+			tr.appendChild(td7);
+			tr.appendChild(td8);
+
+		//createTextNode()//创建文本节点
+
+		//appendChild()//把新节点添加到指定节点
+
+		var tb = document.getElementById('mytable').appendChild(tr);
+		//document.write("d");
+	}
+</script>
+</html>
