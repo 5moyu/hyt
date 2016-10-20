@@ -1,53 +1,108 @@
-<!DOCTYPE html>
-<html lang="en">
+<!doctype html>
+<html>
 <head>
-	<meta charset="UTF-8">
-	<title>loading</title>
+<meta charset="UTF-8">
+<title>墨玉个人站</title>
+<meta name="Keywords" content="" >
+<meta name="Description" content="" >
+<link href="css/styles.css" rel="stylesheet">
+<!--[if lt IE 9]>
+<script src="js/modernizr.js"></script>
+<![endif]-->
+<script src="js/jquery-1.4.4.min.js"></script>
+<script src="js/main.js"></script>
 </head>
-<style>
-	.load{
-		position: relative;
-		width: 50px;
-		height: 50px;
-		animation: xin 1s 0.3s linear infinite alternate;
-	}
-	.load:before,
-	.load:after{
-		content: '';
-		position: absolute;
-		left: 8px;
-		border-radius: 30px 30px 0 0;
-		background: red;
-		width: 30px;
-		height: 50px;
-		transform: rotate(45deg);
-		transform-origin: 0 100%;
-	}
-	.load:after{
-		left: 20px;
-		transform: rotate(-45deg);
-		transform-origin: 100% 100%;
-	}
-	@keyframes xin{
-		0%{
-			opacity: 0.2;
-		}
-		100%{
-			opacity: 1;
-		}
-	}
-</style>
 <body>
-	<div class="load">
-		
-	</div>
-	<div>
-		<a href="demo.html">
-			demo
-		</a>
-		<a href="fullpage/fullpage.html">
-			全屏滚动
-		</a>
-	</div>
+<header>
+<a href="javascript:;" id="logo"><img src="images/logo.png" alt=""/><h1>墨玉</h1></a>
+ <div id="wrap-menu">                    
+   <ul id="header-menu">
+     <li><a href="javascript:;">网站首页</a></li>
+     <li><a href="javascript:;">个人档案</a>
+        <ul class="second-lvl">
+           <li><a href="javascript:;">关于我</a></li>
+           <li><a href="javascript:;">我的相册</a></li>
+           <li><a href="javascript:;">我的作品</a></li>                      
+         </ul>   
+      </li>
+      <li><a href="javascript:;">个人博客</a></li>
+      <li><a href="javascript:;">技术探讨</a>
+         <ul class="second-lvl">
+           <li><a href="javascript:;">PHP</a></li>
+           <li><a href="javascript:;">ASP</a></li>
+           <li><a href="javascript:;">Div+css</a>
+               <ul class="third-lvl">
+                  <li><a href="javascript:;">html5</a></li>
+                  <li><a href="javascript:;">css</a></li>                       
+                </ul>       
+            </li>
+           </ul>                             
+        </li>
+        <li><a href="javascript:;">给我留言</a></li>
+        <li><a href="javascript:;">友情链接</a></li>
+    </ul>
+</div>            
+</header>
+<div id="container">
+   <div class="banner">
+     <img src="images/banner1.jpg">
+   </div>
+</div>
+<div class="motto">
+ <p>有时候不是我不理你，其实我也想你了，只是我不知道该对你说什么。不管过去如何，过去的已经过去，最好的总在未来等着你。当我们懂得珍惜平凡的幸福的时候，就已经成了人生的赢家。<b>Nothing is as sweet as you</b> 再没什么，能甜蜜如你。我以为只要很认真的喜欢就能打动一个人，到后来，却只打动了我自己。</p>
+  <ul class="inbar">
+    <li><img src="images/01.jpg"></li>
+    <li><img src="images/02.jpg"></li>
+    <li><img src="images/03.jpg"></li>
+  </ul>
+</div>
+<div id="container2">
+ <ul class="template">
+    <section>
+     <h2>作品一</h2>
+     <img src="images/01.jpg">
+     <p>
+有时候不是我不理你，其实我也想你了，只是我不知道该对你说什么。不管过去如何，过去的已经过去，最好的总在未来等着你。当我们懂得珍惜平凡的幸福的时候，就已经成了人生的赢家。Nothing is as sweet as you 再没什么，能甜蜜如你。我以为只要很认真的喜欢就能打动一个人，到后来，却只打动了我自己。
+     </p>
+     <h4><a href="fullpage/fullpage.html"><b>详情</b><span>更多>></span></a></h4>
+    </section>
+     <section>
+     <h2>作品二</h2>
+     <img src="images/02.jpg">
+     <p>
+有时候不是我不理你，其实我也想你了，只是我不知道该对你说什么。不管过去如何，过去的已经过去，最好的总在未来等着你。当我们懂得珍惜平凡的幸福的时候，就已经成了人生的赢家。Nothing is as sweet as you 再没什么，能甜蜜如你。我以为只要很认真的喜欢就能打动一个人，到后来，却只打动了我自己。
+     </p>
+     <h4><a href="javascript:;"><b>详情</b><span>更多>></span></a></h4>
+    </section>
+        <section>
+     <h2>作品三</h2>
+     <img src="images/03.jpg">
+     <p>
+有时候不是我不理你，其实我也想你了，只是我不知道该对你说什么。不管过去如何，过去的已经过去，最好的总在未来等着你。当我们懂得珍惜平凡的幸福的时候，就已经成了人生的赢家。Nothing is as sweet as you 再没什么，能甜蜜如你。我以为只要很认真的喜欢就能打动一个人，到后来，却只打动了我自己。
+     </p>
+    <h4><a href="javascript:;"><b>详情</b><span>更多>></span></a></h4>
+    </section>
+ </ul>
+</div>
+<div class="idea">
+ <p>
+当我们懂得珍惜平凡的幸福的时候，就已经成了人生的赢家。Nothing is as sweet as you 再没什么，能甜蜜如你。我以为只要很认真的喜欢就能打动一个人，到后来，却只打动了我自己。
+ </p>
+</div>
+<footer>
+ <div class="footer-mid">
+    
+    <section class="contact">
+      <h2>留言</h2>
+      <form id="footer-form" method="post" action="">
+        <input type="text" onfocus="if(this.value=='Name')this.value='';" onblur="if(this.value=='')this.value='Name';" value="Name" name="field1footer" class="footer-input" >
+         <input type="text" onfocus="if(this.value=='Email')this.value='';" onblur="if(this.value=='')this.value='Email';" value="Email" class="footer-input">
+         <textarea class="footer-textarea" name="field3footer" id="field3footer"></textarea>
+         <input type="submit" id="submit" value="Send" name="submit">                
+          </form>
+    </section>
+ </div>
+<div id="footer-bottom"><ul><p>Copyright 2016 design by <a href="javascript:;">dancesmile</a></p></ul></div>
+</footer>
 </body>
 </html>
